@@ -191,7 +191,7 @@ Pada tahap ini, dilakukan beberapa hal, diantaranya.
 
 <img src="https://github.com/user-attachments/assets/fd51707a-e218-485c-92f2-566073c3dfcc" alt="Wisata" width="500">
 
-### TF-IDF Vectorizer
+## TF-IDF Vectorizer
 TF-IDF Vectorizer digunakan untuk mengubah teks menjadi representasi numerik yang dapat digunakan dalam analisis lebih lanjut. Dengan menggabungkan frekuensi kemunculan kata (Term Frequency) dan pentingnya kata tersebut dalam konteks dokumen lainnya (Inverse Document Frequency), TF-IDF memberikan bobot pada kata-kata yang relevan dan jarang muncul di seluruh dataset. Ini meningkatkan kualitas pemodelan teks, mengurangi pengaruh kata-kata umum yang tidak memberi banyak informasi. Beberapa langkah yang dilakukan pada tahap ini diantaranya.
 1. Melakukan inisialisasi TF-IDF Vectorizer dengan embuat objek TfidfVectorizer.
 2. Menggabungkan dua kolom (kategori dan kota) dalam dataset dan mempersiapkan data untuk pemrosesan.
