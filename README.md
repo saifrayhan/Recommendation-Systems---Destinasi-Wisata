@@ -301,9 +301,7 @@ Keterangan
 
 ![Hasil Metrik RMSE](https://github.com/user-attachments/assets/a2839a62-36dd-420a-960b-f7fec95985e9)
 
-Hasil evaluasi menunjukkan setelah mencapai epoch sebanyak 100, diperoleh nilai error training sebesar 0.33 dengan error validasi sebesar 0.34.
-
-Grafik yang ditampilkan menunjukkan RMSE untuk data train dan pengujian test selama 100 epoch. Nilai RMSE untuk data train (garis biru) menurun secara konsisten dari sekitar 0.34 menjadi sekitar 0.33 menunjukkan bahwa model semakin baik dalam memprediksi data pelatihan seiring berjalannya waktu. Sementara itu, RMSE untuk data test (garis oranye) juga menunjukkan penurunan yang lebih terbatas, mendatar di sekitar 0.34 setelah beberapa epoch.
+Grafik yang ditampilkan menunjukkan RMSE untuk data train dan data test selama 100 epoch. Nilai RMSE untuk data train (garis biru) menurun secara konsisten dari sekitar 0.34 menjadi sekitar 0.33 menunjukkan bahwa model semakin baik dalam memprediksi data pelatihan seiring berjalannya waktu. Sementara itu, RMSE untuk data test (garis oranye) juga menunjukkan penurunan yang lebih terbatas di sekitar 0.34 setelah beberapa epoch.
 
 # Kesimpulan
 Penggunaan content-based filtering dan collaborative filtering telah menjawab problem statement yang mana model mampu memberikan rekomendasi destinasi berdasarkan karakteristik destinasi yang serupa dan rating wisatawan, dengan hasil yang relevan dan personal. Model berhasil menganalisis karakteristik destinasi serta data rating untuk memberikan rekomendasi yang lebih akurat sesuai dengan preferensi wisatawan. Dengan menggunakan metode seperti cosine similarity dan RMSE, model meningkatkan kualitas rekomendasi destinasi dengan memanfaatkan data yang ada untuk menyarankan destinasi yang sesuai dengan preferensi wisatawan.
