@@ -192,7 +192,7 @@ Setiap list tersebut menjadi kolom dalam DataFrame baru dengan nama kolom 'id', 
 
 <img src="https://github.com/user-attachments/assets/37236cdc-9e13-4a54-9fcf-bdd6473cbab5" alt="Wisata" width="500">
 
-Tujuan dari kode di atas adalah untuk menyimpan informasi terkait tempat wisata dalam format yang terstruktur sehingga lebih mudah mengelola, menganalisis, dan memproses data tempat wisata tersebut.
+Tujuan dari fungsi di atas adalah untuk menyimpan informasi terkait tempat wisata dalam format yang terstruktur sehingga lebih mudah mengelola, menganalisis, dan memproses data tempat wisata tersebut.
 
 ## TF-IDF Vectorizer
 TF-IDF Vectorizer digunakan untuk mengubah teks menjadi representasi numerik yang dapat digunakan dalam analisis lebih lanjut. Dengan menggabungkan frekuensi kemunculan kata (Term Frequency) dan pentingnya kata tersebut dalam konteks dokumen lainnya (Inverse Document Frequency), TF-IDF memberikan bobot pada kata-kata yang relevan dan jarang muncul di seluruh dataset. Ini meningkatkan kualitas pemodelan teks, mengurangi pengaruh kata-kata umum yang tidak memberi banyak informasi. Beberapa langkah yang dilakukan pada tahap ini diantaranya.
