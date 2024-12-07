@@ -298,6 +298,7 @@ Recommender System Precision digunakan untuk mengevaluasi model Content Based Fi
 $$\text{Precision} = \frac{\text{Jumlah item relevan yang direkomendasikan}}{\text{Jumlah total item yang direkomendasikan}}$$
 
 **Hasil Evaluasi Berdasarkan Metrik Recommender System Precision**
+
 Berdasarkan kasus pada model content based filtering, tujuannya adalah ingin memberikan rekomendasi tempat wisata yang mirip dengan "Surabaya North Quay". Surabaya North Quay dikategorikan ke dalam Taman Hiburan yang ada di Kota Surabaya, sehingga diharapkan rekomendasi yang diberikan adalah tempat dengan kategori Taman Hiburan di Surabaya. Berikut adalah hasil dari model tersebut.
 
 <img src="https://github.com/user-attachments/assets/74fbe8cd-a987-476c-8c49-6128944d7fa5" alt="Rekomendasi Content Based" width="350">
