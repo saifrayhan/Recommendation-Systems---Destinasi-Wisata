@@ -305,6 +305,8 @@ Berdasarkan kasus pada model content based filtering, tujuannya adalah ingin mem
 
 Berdasarkan hasil yang diberikan, sistem merekomendasikan 5 tempat wisata dengan kategori Taman Hiburan yang kelimanya berada di Surabaya. 
 
+$$\text{Precision} = \frac{\text{Jumlah item relevan yang direkomendasikan}}{\text{Jumlah total item yang direkomendasikan}}$$
+
 $$\text{Precision} = \frac{\text{5}}{\text{5}} = 1$$
 
 Hasil di atas menunjukkan bahwa sistem merokemendasikan tempat wisata secara akurat.
