@@ -186,10 +186,13 @@ Hasil pengecekan di atas menunjukkan bahwa missing value hanya terdapat pada dat
 ### Menyamakan Data Tempat Wisata
 Pada tahap ini, dilakukan beberapa hal, diantaranya.
 1. Data `df_place` akan diurutkan terlebih dahulu berdasarkan 'Place_Id' lalu dibuatkan dataframe baru dengan nama inis`tempat_wisata` untuk data yang telah diurutkan. 
-2. Data series pada Place_Id dan Place_Name akan diubah kedalam bentuk list. 
-3. Data dibuatkan direktori baru bernama `wisata` untuk menampung variabel yang akan digunakan pada modeling, seperti 'id', 'nama_tempat', 'kategori', dan 'kota' seperti di bawah ini.
+2. Data series pada Place_Id, Place_Name, dan Category diubah kedalam bentuk list menggunakan fungsi `tolist()`, kemudian data yang sudah diubah ke bentuk list masing-masing direpresentasikan ke dalam `id_tempat` untuk list Place_Id. `nama_tempat` untuk Place_Name, dan `kategori_wisata` untuk Category. Setelahnya, untuk mengetahui jumlah list dari setiap variabel digunakan fungsi `len()`. Dari hasil ini diperoleh bahwa masing-masing varibel yang sudah diubah ke bentuk list memiliki 437 data.
+3. Setelah data diubah ke bentuk list, data dibuatkan direktori baru bernama `wisata`. Data yang digunakan untuk membangun DataFrame diambil dari beberapa list yang sebelumnya telah dibuat, yaitu `id_tempat`, `nama_tempat`, `kategori_wisata`, dan `kota_wisata`.
+Setiap list tersebut menjadi kolom dalam DataFrame baru dengan nama kolom 'id', 'nama_tempat', 'kategori', dan 'kota'. Jadi, kolom 'id' berisi data dari id_tempat, kolom 'nama_tempat' berisi data dari nama_tempat, dan seterusnya.
 
-<img src="https://github.com/user-attachments/assets/fd51707a-e218-485c-92f2-566073c3dfcc" alt="Wisata" width="500">
+<img src="https://github.com/user-attachments/assets/37236cdc-9e13-4a54-9fcf-bdd6473cbab5" alt="Wisata" width="500">
+
+Tujuan dari kode di atas adalah untuk menyimpan informasi terkait tempat wisata dalam format yang terstruktur sehingga lebih mudah mengelola, menganalisis, dan memproses data tempat wisata tersebut.
 
 ## TF-IDF Vectorizer
 TF-IDF Vectorizer digunakan untuk mengubah teks menjadi representasi numerik yang dapat digunakan dalam analisis lebih lanjut. Dengan menggabungkan frekuensi kemunculan kata (Term Frequency) dan pentingnya kata tersebut dalam konteks dokumen lainnya (Inverse Document Frequency), TF-IDF memberikan bobot pada kata-kata yang relevan dan jarang muncul di seluruh dataset. Ini meningkatkan kualitas pemodelan teks, mengurangi pengaruh kata-kata umum yang tidak memberi banyak informasi. Beberapa langkah yang dilakukan pada tahap ini diantaranya.
@@ -286,7 +289,27 @@ Model ini menggunakan matriks prediksi untuk memproyeksikan rating yang mungkin 
 <img src="https://github.com/user-attachments/assets/78d1a23a-860a-4580-a2e1-77896bc185e6" alt="Rekomendasi Collaborative" width="450">
 
 # Evaluation
-RMSE (Root Mean Squared Error) adalah metrik yang digunakan untuk mengukur seberapa besar perbedaan antara nilai prediksi dan nilai aktual dalam satuan yang sama dengan data asli. Proses perhitungannya melibatkan langkah pertama untuk mengkuadratkan selisih antara nilai prediksi dan nilai sebenarnya, lalu menghitung rata-rata dari hasil kuadrat tersebut, dan akhirnya mengambil akar kuadrat dari rata-rata tersebut. Hasil RMSE yang lebih rendah menunjukkan model yang lebih baik dalam memprediksi dengan akurat, karena kesalahan yang lebih kecil menghasilkan nilai RMSE yang lebih rendah.
+
+## Recommender System Precision
+Recommender System Precision digunakan untuk mengevaluasi model Content Based Filtering. Recommender System Precision adalah metrik evaluasi yang digunakan untuk mengukur seberapa relevan rekomendasi yang diberikan oleh sistem dengan preferensi atau kebutuhan pengguna. Precision mengukur seberapa banyak item yang direkomendasikan benar-benar relevan dibandingkan dengan total item yang direkomendasikan. Semakin tinggi precision, semakin relevan rekomendasi yang diberikan oleh sistem, karena sistem memberikan lebih banyak item yang sesuai dengan preferensi pengguna.
+
+**Formula Recommender System Precision**
+
+$$\text{Precision} = \frac{\text{Jumlah item relevan yang direkomendasikan}}{\text{Jumlah total item yang direkomendasikan}}$$
+
+**Hasil Evaluasi Berdasarkan Metrik Recommender System Precision**
+Berdasarkan kasus pada model content based filtering, tujuannya adalah ingin memberikan rekomendasi tempat wisata yang mirip dengan "Surabaya North Quay". Surabaya North Quay dikategorikan ke dalam Taman Hiburan yang ada di Kota Surabaya, sehingga diharapkan rekomendasi yang diberikan adalah tempat dengan kategori Taman Hiburan di Surabaya. Berikut adalah hasil dari model tersebut.
+
+<img src="https://github.com/user-attachments/assets/74fbe8cd-a987-476c-8c49-6128944d7fa5" alt="Rekomendasi Content Based" width="350">
+
+Berdasarkan hasil yang diberikan, sistem merekomendasikan 5 tempat wisata dengan kategori Taman Hiburan yang kelimanya berada di Surabaya. 
+
+$$\text{Precision} = \frac{\text{5}}{\text{5}} = 1$$
+
+Hasil di atas menunjukkan bahwa sistem merokemendasikan tempat wisata secara akurat.
+
+## RMSE (Root Mean Squared Error)
+RMSE (Root Mean Squared Error) digunakan untuk melakukan evaluasi terhadap model development dengan Collaborative Filtering. RMSE adalah metrik untuk mengukur seberapa besar perbedaan antara nilai prediksi dan nilai aktual dalam satuan yang sama dengan data asli. Proses perhitungannya melibatkan langkah pertama untuk mengkuadratkan selisih antara nilai prediksi dan nilai sebenarnya, lalu menghitung rata-rata dari hasil kuadrat tersebut, dan akhirnya mengambil akar kuadrat dari rata-rata tersebut. Hasil RMSE yang lebih rendah menunjukkan model yang lebih baik dalam memprediksi dengan akurat, karena kesalahan yang lebih kecil menghasilkan nilai RMSE yang lebih rendah.
 
 **Formula RMSE**
 
