@@ -1,5 +1,5 @@
 # Laporan Proyek Machine Learning - Saif Rayhan Naufal
-#### _Rekomendasi Destinasi Wisata di Indonesia_
+#### _Recommendation Systems - Destinasi Wisata di Indonesia_
 
 ![Cover](https://github.com/user-attachments/assets/41f74ddd-8909-447e-9221-c7fcda7ba93a)
 
